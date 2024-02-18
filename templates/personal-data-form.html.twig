@@ -1,0 +1,174 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Форма заполнения{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        {% if errors.notFound is defined and errors.notFound is not empty %}
+            <div class="alert alert-danger" role="alert">
+                {{ errors.notFound }}
+            </div>
+        {% else %}
+            <h2>Insurance Form</h2>
+
+            {{ form_start(form) }}
+
+            <h4>Страхователь</h4>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    {{ form_label(form.insurerFirstName) }}
+                    {{ form_widget(form.insurerFirstName, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.insurerFirstName) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.insurerFirstName) }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="form-group col-md-4">
+                    {{ form_label(form.insurerLastName) }}
+                    {{ form_widget(form.insurerLastName, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.insurerLastName) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.insurerLastName) }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="form-group col-md-4">
+                    {{ form_label(form.insurerPatronymic) }}
+                    {{ form_widget(form.insurerPatronymic, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.insurerPatronymic) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.insurerPatronymic) }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="form-group">
+                {{ form_label(form.insurerBirthDate) }}
+                {{ form_widget(form.insurerBirthDate, {'attr': {'class': 'form-control'}}) }}
+                {% if form_errors(form.insurerBirthDate) %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ form_errors(form.insurerBirthDate) }}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    {{ form_label(form.passportSeries) }}
+                    {{ form_widget(form.passportSeries, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.passportSeries) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.passportSeries) }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="form-group col-md-3">
+                    {{ form_label(form.passportNumber) }}
+                    {{ form_widget(form.passportNumber, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.passportNumber) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.passportNumber) }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="form-group col-md-3">
+                    {{ form_label(form.passportIssueDate) }}
+                    {{ form_widget(form.passportIssueDate, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.passportIssueDate) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.passportIssueDate) }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="form-group col-md-3">
+                    {{ form_label(form.passportIssuingAuthority) }}
+                    {{ form_widget(form.passportIssuingAuthority, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.passportIssuingAuthority) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.passportIssuingAuthority) }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    {{ form_label(form.phoneNumber) }}
+                    {{ form_widget(form.phoneNumber, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.phoneNumber) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.phoneNumber) }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="form-group col-md-6">
+                    {{ form_label(form.email) }}
+                    {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.email) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.email) }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <h4>Застрахованный</h4>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    {{ form_label(form.insuredFirstName) }}
+                    {{ form_widget(form.insuredFirstName, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.insuredFirstName) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.insuredFirstName) }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="form-group col-md-4">
+                    {{ form_label(form.insuredLastName) }}
+                    {{ form_widget(form.insuredLastName, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.insuredLastName) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.insuredLastName) }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="form-group col-md-4">
+                    {{ form_label(form.insuredPatronymic) }}
+                    {{ form_widget(form.insuredPatronymic, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.insuredPatronymic) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.insuredPatronymic) }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    {{ form_label(form.insuredBirthDate) }}
+                    {{ form_widget(form.insuredBirthDate, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.insuredBirthDate) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.insuredBirthDate) }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="form-group col-md-6">
+                    {{ form_label(form.insuredGender) }}
+                    {{ form_widget(form.insuredGender, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.insuredGender) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.insuredGender) }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+            {{ form_end(form) }}
+        {% endif %}
+    </div>
+{% endblock %}
