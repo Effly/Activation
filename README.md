@@ -24,7 +24,7 @@ Symfony docker template is a template to start a new symfony project with docker
 ## Fast setup
 
 ```shell
-git clone https://github.com/TheoMeunier/symfony-template.git
+git clone https://github.com/Effly/Activation
 sudo chown 1000:1000 symfony-template/ -R
 cd symfony-template
 cp .env.exemple .env
