@@ -112,8 +112,8 @@ class ContractController extends AbstractController
             $this->contractService->create(
                 $form->getData()['number'],
                 $form->getData()['pin'],
-                isset($form->getData()['isPay']) ? $form->getData()['isPay'] : null,
-                isset($form->getData()['cost']) ? $form->getData()['cost'] : null,
+                isset($form->getData()['isPay']) ? $form->getData()['isPay'] : false,
+                isset($form->getData()['cost']) ? $form->getData()['cost'] : 0,
                 isset($form->getData()['limitDate']) ? $form->getData()['limitDate'] : null,
                 isset($form->getData()['periodDay']) ? $form->getData()['periodDay'] : null,
                 isset($form->getData()['amount']) ? $form->getData()['amount'] : null,

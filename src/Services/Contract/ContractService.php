@@ -44,7 +44,7 @@ class ContractService
         $product = $this->productRepository->findOneBy(['code' => $productCode]);
         if (is_null($product)) {
             $product = new Product();
-            $product->setName(null);
+            $product->setName($productCode);
             $product->setCode($productCode);
             $this->em->persist($product);
         }
