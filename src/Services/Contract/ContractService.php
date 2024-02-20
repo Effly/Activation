@@ -23,7 +23,7 @@ class ContractService
     public function create(
         string  $number,
         string  $pin,
-        bool    $isPay,
+        ?bool    $isPay,
         ?float  $cost,
         string  $limitDate,
         int     $periodDay,
