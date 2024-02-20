@@ -23,6 +23,13 @@ class NewContractRequest extends AbstractType
                     new NotBlank(),
                     new Length(['min' => 6, 'max' => 6])
                 ]
-            ]);
+            ])
+            ->add('isPay', null)
+            ->add('cost', null)
+            ->add('limitDate', null)
+            ->add('periodDay', null)
+            ->add('amount', null)
+            ->add('productCode', null)
+        ;
     }
 }

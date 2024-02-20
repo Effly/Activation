@@ -28,7 +28,7 @@
         </div>
 
         <div class="form-group">
-            {{ form_label(form.pin, 'Пин') }}
+            {{ form_label(form.pin, 'PIN-код') }}
             {{ form_widget(form.pin, {'attr': {'class': 'form-control ' ~ (errors.pin is defined and errors.pin is not empty ? 'is-invalid' : '')}}) }}
             {% if errors.pin is defined and errors.pin is not empty %}
                 <div class="invalid-feedback">
