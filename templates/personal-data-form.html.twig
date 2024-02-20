@@ -15,7 +15,7 @@
 
             <h4>Страхователь</h4>
             <div class="form-row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     {{ form_label(form.insurerFirstName) }}
                     {{ form_widget(form.insurerFirstName, {'attr': {'class': 'form-control'}}) }}
                     {% if form_errors(form.insurerFirstName) %}
@@ -24,7 +24,7 @@
                         </div>
                     {% endif %}
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     {{ form_label(form.insurerLastName) }}
                     {{ form_widget(form.insurerLastName, {'attr': {'class': 'form-control'}}) }}
                     {% if form_errors(form.insurerLastName) %}
@@ -33,7 +33,7 @@
                         </div>
                     {% endif %}
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     {{ form_label(form.insurerPatronymic) }}
                     {{ form_widget(form.insurerPatronymic, {'attr': {'class': 'form-control'}}) }}
                     {% if form_errors(form.insurerPatronymic) %}
@@ -42,16 +42,16 @@
                         </div>
                     {% endif %}
                 </div>
-            </div>
 
-            <div class="form-group">
-                {{ form_label(form.insurerBirthDate) }}
-                {{ form_widget(form.insurerBirthDate, {'attr': {'class': 'form-control'}}) }}
-                {% if form_errors(form.insurerBirthDate) %}
-                    <div class="alert alert-danger" role="alert">
-                        {{ form_errors(form.insurerBirthDate) }}
-                    </div>
-                {% endif %}
+                <div class="form-group col-md-3">
+                    {{ form_label(form.insurerBirthDate) }}
+                    {{ form_widget(form.insurerBirthDate, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.insurerBirthDate) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.insurerBirthDate) }}
+                        </div>
+                    {% endif %}
+                </div>
             </div>
 
             <div class="form-row">

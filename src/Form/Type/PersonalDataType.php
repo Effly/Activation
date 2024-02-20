@@ -2,6 +2,7 @@
 
 namespace App\Form\Type;
 
+use App\Form\Custom\InsuredBirthDate;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -190,9 +191,11 @@ class PersonalDataType extends AbstractType
                     new NotBlank([
                         'message' => 'Дата рождения застрахованного не должна быть пустой',
                     ]),
+                    new InsuredBirthDate(),
                 ],
             ])
             ->add('insuredGender', ChoiceType::class, [
+                'label' => 'Пол',
                 'choices' => [
                     'Мужской' => 'male',
                     'Женский' => 'female',
