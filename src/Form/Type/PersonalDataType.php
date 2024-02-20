@@ -75,6 +75,9 @@ class PersonalDataType extends AbstractType
                         'message' => 'Дата рождения не должно быть пустой',
                     ]),
                 ],
+                'attr' => [
+                    'min' => '1900-01-01', // Установите минимальную дату рождения
+                ],
             ])
             ->add('passportSeries', NumberType::class, [
                 'label' => 'Серия паспорта',
@@ -107,6 +110,9 @@ class PersonalDataType extends AbstractType
                     new NotBlank([
                         'message' => 'Дата выдачи не должен быть пустой',
                     ]),
+                ],
+                'attr' => [
+                    'min' => '1900-01-01', // Установите минимальную дату рождения
                 ],
             ])
             ->add('passportIssuingAuthority', TextType::class, [
@@ -192,6 +198,9 @@ class PersonalDataType extends AbstractType
                         'message' => 'Дата рождения застрахованного не должна быть пустой',
                     ]),
                     new InsuredBirthDate(),
+                ],
+                'attr' => [
+                    'min' => '1900-01-01', // Установите минимальную дату рождения
                 ],
             ])
             ->add('insuredGender', ChoiceType::class, [
